@@ -6,34 +6,62 @@
 		<link rel="stylesheet" type="text/css" href="css/style.css">
 	</head>
 	<body>
-		<div class="page-wrapper">
+		
+			<div class="pre-header"></div>
 			<header>
-				<div class="container flex al-c">
+				<div class="wrapper flex al-c">
 					<a href="#" class="logo"><span class="logo-title">Singolo<span class="logo-star">*</span></span></a>
 					<nav>
 						<ul>
-							<li class="active"><a href="/">Home</a></li>
-							<li><a href="#">Services</a></li>
-							<li><a href="#">Portfolio</a></li>
-							<li><a href="#">About</a></li>
-							<li><a href="#">Contact</a></li>
+							<li class="active"><a href="#home">Home</a></li>
+							<li><a href="#services">Services</a></li>
+							<li><a href="#portfolio">Portfolio</a></li>
+							<li><a href="#about">About</a></li>
+							<li><a href="#contact">Contact</a></li>
 						</ul>
 					</nav>
 				</div>
 			</header>
 			<main class="page">
-				<div class="slider">
-					<div class="slide-item">
-						<img src="assets/img/slide.jpg" alt="banner">
+				<div class="slider" id="home">
+					<div class="slides">
+						<div class="slide-item first active">
+							<div class="wrapper">
+								<div class="phone-vertical">
+									<img class="phone-wrapper" src="assets/img/phone_vertical.png" alt="p_wrapper">
+									<img class="phone-back" src="assets/img/phone-vertical-display.jpg" alt="background">
+								</div>
+								<div class="phone-gorizontal">
+									<img class="phone-wrapper" src="assets/img/phone-horizontal.png" alt="p_wrapper">
+									<img class="phone-back" src="assets/img/phone-horizontal-display.jpg" alt="background">
+								</div>
+							</div>
+						</div>
+						<div class="slide-item second">
+							<div class="wrapper">
+								<div class="phone-group">
+									<img class="phone-wrapper" src="assets/img/group_phones.png" alt="p_wrapper">
+									<img class="phone-back" src="assets/img/phone-vertical-display_2.jpg" alt="background">
+								</div>
+							</div>
+						</div>	
+						<div class="slide-item">
+							<div class="wrapper">
+								<div class="phone-group">
+									<img class="phone-wrapper" src="assets/img/group_phones.png" alt="p_wrapper">
+									<img class="phone-back" src="assets/img/phone-vertical-display_2.jpg" alt="background">
+								</div>
+							</div>
+						</div>						
 					</div>
 					<div class="slider-navs">
 						<button class="slide-button slide-prev"></button>
 						<button class="slide-button slide-next"></button>
 					</div>
 				</div>
-				<section class="content">
-					<div class="container">
-						<h1>Our services</h1>
+				<section class="content" id="services">
+					<div class="wrapper">
+						<span class="h1">Our services</span>
 						<p>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
 						<div class="vantages flex">
 							<div class="vantage-item">
@@ -81,67 +109,82 @@
 						</div>
 					</div>
 				</section>   
-				<section class="portfolio-block">
-					<div class="container">
-						<h1>Portfolio</h1>
+				<section class="portfolio-block" id="portfolio">
+					<div class="wrapper">
+						<span class="h1">Portfolio</span>
 						<p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
 						<div class="protfolio-nav">
-							<button class="active">All</button>
-							<button>Web Design</button>
-							<button>Graphic Design</button>
-							<button>Artwork</button>
+							<button data-tag="all" class="active">All</button>
+							<button data-tag="web">Web Design</button>
+							<button data-tag="design">Graphic Design</button>
+							<button data-tag="art">Artwork</button>
 						</div>
-						<div class="row flex">
+						<div class="row flex portfolio-wrapp">
 							<div class="protfolio-item">
-								<img src="assets/img/Project.jpg" alt="project">
+								<div class="image">
+									<img src="assets/img/Project.jpg" alt="project">
+								</div>
 							</div>            
 							<div class="protfolio-item">
-								<img src="assets/img/Project-3.jpg" alt="project3">
+								<div class="image">
+									<img src="assets/img/Project-3.jpg" alt="project3">
+								</div>
 							</div>            
 							<div class="protfolio-item">
-								<img src="assets/img/Layer_9.jpg" alt="Layer_9">
+								<div class="image">
+									<img src="assets/img/Layer_9.jpg" alt="Layer_9">
+								</div>
 							</div>            
 							<div class="protfolio-item">
-								<img src="assets/img/Project-5.jpg" alt="Project-5">
+								<div class="image">
+									<img src="assets/img/Project-5.jpg" alt="Project-5">
+								</div>	
 							</div>            
 							<div class="protfolio-item">
-								<img src="assets/img/Project-1.jpg" alt="Project-1">
+								<div class="image">
+									<img src="assets/img/Project-1.jpg" alt="Project-1">
+								</div>
 							</div>          
 							<div class="protfolio-item">
-								<img src="assets/img/Project-4.jpg" alt="Project-4">
+								<div class="image">
+									<img src="assets/img/Project-4.jpg" alt="Project-4">
+								</div>
 							</div>            
 							<div class="protfolio-item">
-								<img src="assets/img/Layer_11.jpg" alt="Layer_11">
+								<div class="image">
+									<img src="assets/img/Layer_11.jpg" alt="Layer_11">
+								</div>
 							</div>            
 							<div class="protfolio-item">
-								<img src="assets/img/Layer_8.jpg" alt="Layer_8">
+								<div class="image">
+									<img src="assets/img/Layer_8.jpg" alt="Layer_8">
+								</div>
 							</div>            
 							<div class="protfolio-item">
-								<img src="assets/img/Project-2.jpg" alt="Project-2">
+								<div class="image">
+									<img src="assets/img/Project-2.jpg" alt="Project-2">
+								</div>
 							</div>            
 							<div class="protfolio-item">
-								<img src="assets/img/Project-7.jpg" alt="Project-7">
+								<div class="image">
+									<img src="assets/img/Project-7.jpg" alt="Project-7">
+								</div>
 							</div>            
 							<div class="protfolio-item">
-								<img src="assets/img/Project-6.jpg" alt="Project-6">
+								<div class="image">
+									<img src="assets/img/Project-6.jpg" alt="Project-6">
+								</div>
 							</div>            
 							<div class="protfolio-item">
-								<img src="assets/img/Project-8.jpg" alt="Project-8">
-							</div>							
-							<div class="protfolio-item">
-								<img src="assets/img/Project-7.jpg" alt="Project-7">
-							</div>            
-							<div class="protfolio-item">
-								<img src="assets/img/Project-6.jpg" alt="Project-6">
-							</div>            
-							<div class="protfolio-item">
-								<img src="assets/img/Project-8.jpg" alt="Project-8">
-							</div>
+								<div class="image">
+									<img src="assets/img/Project-8.jpg" alt="Project-8">
+								</div>
+							</div>							           
 						</div>
 					</div>
 				</section>
-				<section class="content persons">
-					<div class="container">
+				<section class="content persons" id="about">
+					<div class="wrapper">
 						<span class="h1">About us</span>
 						<p>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
 						<div class="team-block">
@@ -189,9 +232,9 @@
 						</div>
 					</div>
 				</section>
-				<section class="form-block">
-					<div class="container">
-						<h1>Get a Quote</h1>
+				<section class="form-block" id="contact">
+					<div class="wrapper">
+						<span class="h1">Get a Quote</span>
 						<p>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
 						<div class="half-blocks">
 							<div class="half-block left">
@@ -216,7 +259,7 @@
 					</div>
 				</section>
 				<footer>
-					<div class="container">
+					<div class="wrapper">
 						<div class="flex al-c">
 							<span class="copyright">&copy; Copyright 2013</span>
 							<div class="social-block">
@@ -229,6 +272,14 @@
 					</div>
 				</footer>								  
 			</main>
-		</div>
+			<div class="overlay">
+				<div class="popup">
+					<span><b>Письмо отправлено</b></span>
+					<span class="theme">Без темы</span>
+					<span class="desc">Без описания</span>
+					<button class="submit close" type="button">Ок</button>
+				</div>
+			</div>
+			<script src="script.js"></script>
 	</body>
 </html>
