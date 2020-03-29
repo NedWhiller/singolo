@@ -571,7 +571,10 @@ nav li.active a, nav li:hover a {
 }
 
 .team-image img {
-	width: 100%;
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .team-item .title {
@@ -649,7 +652,7 @@ nav li.active a, nav li:hover a {
 
 .form-block {
 	padding-top: 59px;
-	padding-bottom: 16px;
+	padding-bottom: 64px;
 	color: #f0d8d9;
 	background-color: #f06c64;
 	border-bottom: 3px solid #ea676b;
@@ -757,19 +760,18 @@ nav li.active a, nav li:hover a {
 	width: 100%;
 	max-width: 100px;
 	padding: 0 10px;
-	margin-left: auto;
 	text-align: center;
 	line-height: 38px;
 	font-family: 'Lato Regular', sans-serif;
 	font-size: 12px;
 	text-transform: uppercase;
-	color: #ffffff;
-	background-color: #7E2C2C;
+	color: #886A30;
+	background-color: #FBC65F;
 	border-radius: 5px;
 }
 
 .submit:hover {
-	background-color: #6D0707;
+	background-color: #c39a4b;
 }
 
 .title {
@@ -860,7 +862,8 @@ nav li.active a, nav li:hover a {
 	transform: translate(-50%, -50%);
 	background-color: #ffffff;
 	border-radius: 10px;
-	width: 500px;
+	max-width: 500px;
+	width: 100%;
 	min-height: 200px;
 }
 
@@ -887,4 +890,391 @@ footer .flex {
 .copyright {
 	font-size: 12px;
 	color: #666d89;
+}
+
+.burger {
+	display: none;
+}
+
+@media (max-width: 1020px) {
+
+	.slide-button.slide-prev {
+		left: 30px;
+	}
+
+	.slide-button.slide-next {
+		right: 30px;
+	}
+
+	.slider {
+	    height: 58.824vw;
+	}
+
+	.slider .wrapper {
+		min-height: 58.824vw;
+	}
+
+	.phone-vertical {
+	    width: 23.529vw;
+	    height: 47.353vw;
+	    left: 10.980vw;
+	    top: 5.196vw;
+	}
+
+	.phone-vertical .phone-back {
+	    left: 1.373vw;
+	    top: 6.373vw;
+	    z-index: 6;
+	    width: 18.431vw;
+	}	
+
+	.phone-gorizontal {
+	    width: 47.353vw;
+	    height: 23.529vw;
+	    right: 10.980vw;
+	    top: 17.059vw;
+	}
+
+	.phone-gorizontal .phone-wrapper {
+		width: 100%;
+	}
+
+	.phone-gorizontal .phone-back {
+	    top: 1.373vw;
+	    left: 5.882vw;
+	    z-index: 6;
+	    width: 32.647vw;
+	    height: 18.431vw;
+	}	
+
+	.phone-group {
+		width: 50.606vw;
+	    height: 50.294vw;
+	    left: 50%;
+	    top: 50%;
+	}
+
+	.phone-group .phone-back {
+		width: 19.706vw;
+		height: 34.706vw;
+		left: 14.216vw;
+		top: 6.765vw;
+	}
+
+	.phone-group .phone-wrapper {
+		width: 100%;
+	}
+}
+
+@media (max-width: 768px) {
+
+	.content {
+		padding-top: 40px;
+	}
+
+	.portfolio-block {
+		padding-top: 40px;
+	}
+
+	.form-block {
+		padding-top: 40px;
+	}
+
+	.vantage-item {
+		width: calc(50% - 25px);
+		margin-right: 50px;
+	}
+
+	.vantage-item:nth-child(2n) {
+		margin-right: 0 !important;
+	}
+
+	.vantage-item:nth-child(3n) {
+		margin-right: 50px;
+	}
+
+	.vantage-item .right-block span {
+		line-height: 18px;
+	}
+
+	.protfolio-item {
+		width: calc(100% / 3);
+	}
+
+	.half-block.right {
+		width: 220px;
+	}
+
+	.half-block.left {
+		width: calc(100% - 220px);
+	}
+}
+
+@media (max-width: 650px) {
+
+	.wrapper {
+		padding: 0 32px;
+	}
+
+	.burger {
+		position: relative;
+		display: inline-block;
+		width: 25px;
+		height: 20px;
+		cursor: pointer;
+		z-index: 10;
+		transition: transform 0.4s;
+	}
+
+	.burger:after, .burger:before {
+		content: '';
+		display: block;
+	}
+
+	.burger span, .burger:after, .burger:before {
+		position: absolute;
+		left: 0;
+		width: 100%;
+		height: 2.4px;
+		background-color: #ffffff;
+		border-radius: 5px;
+	}
+
+	.burger span {
+		top: 0;
+	}
+
+	.burger:before {
+		top: 50%;
+		margin-top: -1.2px;
+	}
+
+	.burger:after {
+		bottom: 0;
+	}
+
+	header .flex.wrapper {
+		padding: 0 20px;
+	}
+
+	header, .pre-header {
+		height: 70px;
+	}
+
+	header nav {
+		position: fixed;
+	    right: 100%;
+	    top: 0;
+	    height: 100%;
+	    width: 270px;
+	    min-height: 100%;
+	    background: #2d303a;
+	    background: #2D303A;
+	    z-index: 5;
+	    transition: transform 0.4s;
+	}
+
+	header nav:after {
+		content: '';
+		position: fixed;
+		display: block;
+		width: 100%;
+		height: 100%;
+		background: #2D303A;
+		opacity: 0;
+		z-index: -1;
+		visibility: hidden;
+		transition: opacity 0.4s;
+	}
+
+	nav ul {
+		display: block;
+		position: absolute;
+		top: 180px;
+		padding-top: 0;
+		padding-left: 70px;
+	}
+
+	nav li {
+		display: block;
+		margin-bottom: 27px;
+		margin-right: 0;
+	}
+
+	nav li a {
+		font-size: 24px;
+		line-height: 29px;
+		padding-right: 0;
+	}
+
+	nav li a:after {
+		display: none;
+	}
+
+	.burger.active {
+		transform: rotate(90deg);
+	}
+
+	.burger.active ~ nav {
+		transform: translateX(100%);
+		box-shadow: 0px -40px 20px rgba(0, 0, 0, 0.4);
+	}
+
+	.burger.active ~ nav:after {
+		visibility: visible;
+		opacity: 0.6;
+		transform: translateX(100%);
+	}
+
+	.burger.active ~ .logo {
+		margin-left: 28.5px;
+	}
+
+	.logo {
+	    margin: 0 auto;
+	    font-size: 19.6875px;
+		line-height: 24px;
+		z-index: 10;
+		transition-duration: 0.4s;
+	}
+
+	.vantage-item {
+		margin-right: 20px;
+		width: calc(50% - 10px);
+	}
+
+	.vantage-item:nth-child(3n) {
+		margin-right: 20px;
+	}
+}
+
+@media (max-width: 480px) {
+
+	header {
+		border-bottom: none;
+	}
+
+	.slider-navs {
+	    margin: -7px auto auto;
+	}
+
+	.slide-button {
+		width: 14px;
+		height: 14px;
+		border-width: 4px;
+	}
+
+	.slide-item:after {
+		height: 3px;
+	}
+
+	.slide-button.slide-prev {
+		left: 12px;
+	}
+
+	.slide-button.slide-next {
+		right: 12px;
+	}
+
+	.protfolio-nav {
+		margin-bottom: 15px;
+	}
+
+	.protfolio-nav button {
+		margin-bottom: 10px;
+	}
+
+	.vantage-item {
+		width: 100% !important;
+		margin-right: 0 !important;
+	}
+
+	.content {
+		padding-top: 25px;
+	}
+
+	.protfolio-item {
+		width: 50%;
+		padding: 0 6.5px;
+		margin-bottom: 13px;
+	}
+
+	.team-block .flex {
+		display: block;
+	}
+
+	.team-item {
+		width: 100%;
+		margin-right: 0;
+		margin-bottom: 35px;
+	}
+
+	.team-item .title {
+		margin-bottom: 5px;
+	}
+
+	.team-item p {
+		margin-bottom: 10px;
+	}
+
+	.team-image {
+	    max-width: none;
+	    width: 100%;
+	    height: auto;
+	    max-height: none;
+	}
+
+	.content.persons {
+		padding-bottom: 10px;
+	}
+
+	.half-block.left {
+		padding: 0;
+		width: 100%;
+		margin-bottom: 30px;
+	}
+
+	.half-block.right {
+		width: 100%;
+	}
+
+	.submit {
+		height: 50px;
+		line-height: 50px;
+		max-width: none;
+		font-size: 14px;
+	}
+
+	.content.persons {
+		padding-bottom: 10;
+		border-bottom: 0;
+	}
+
+	.form-block textarea {
+		height: 159px;
+	}
+
+	.form-block {
+		padding-bottom: 40px;
+	}
+
+	.copyright {
+		display: none;
+	}
+
+	footer .social-block {
+		margin: 0 auto;
+	}
+
+	.form-block input {
+		margin-bottom: 12px;
+	}
+
+	.team-item {
+		margin-bottom: 35px;
+	}
+
+	.popup {
+		width: 95%;
+	}
 }

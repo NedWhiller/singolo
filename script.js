@@ -6,6 +6,7 @@ Array.prototype.forEach.call(menuElems, function(item){
 		document.querySelector('nav li.active').classList.remove('active');
 		item.parentNode.classList.add('active');
 		goTo(item);
+		toggleClass(document.querySelector('.burger'), 'active');
 	})
 })
 
@@ -48,13 +49,22 @@ document.querySelector('.close').addEventListener('click', function() {
 	popup('','close');
 })
 
+document.querySelector('.burger').addEventListener('click', function() {
+	toggleClass(this, 'active');
+})
+
 slider();
 changePortfolio();
 
 function goTo(el) {
 	var goElem = document.querySelector(el.getAttribute('href')),
 		val = getCoords(goElem).top;
-		goElem.scrollIntoView({block: "center", behavior: "smooth"});
+
+		if (window.offsetWidth > 1020) {
+			goElem.scrollIntoView({block: "center", behavior: "smooth"});
+		} else {
+			goElem.scrollIntoView({block: "start", behavior: "smooth"});
+		}
 }
 
 function toggleClass(elem, classes) {
